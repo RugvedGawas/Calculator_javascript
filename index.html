@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>calculator</title>
+</head>
+<body>
+<div class="main">
+    <div>
+        <p>Simple calculator</p>
+        <span>You can also use keyboard keys for operating this calculator</span>
+        <ul>
+            <li>Press 'Enter' key to get answer</li>
+            <li>Press 'Backspace' or 'Delete' keys to remove single character</li>
+            <li>Press 'Escape' key to reset calculator </li>
+        </ul>
+    </div>
+    <div class="calculator">
+        <input type="text" value="0" id="display" disabled>
+         <div id="keypad">
+             <div class="button">
+                 <button onclick="toDisplay('7')">7</button>
+                 <button onclick="toDisplay('8')">8</button>
+                 <button onclick="toDisplay('9')">9</button>
+                 <button id="del" onclick="toDelete()">del</button>
+             </div>
+             <div class="button">
+                 <button onclick="toDisplay('4')">4</button>
+                 <button onclick="toDisplay('5')">5</button>
+                 <button onclick="toDisplay('6')">6</button>
+                 <button onclick="toOperate('+')">+</button>
+             </div>
+             <div class="button">
+                 <button onclick="toDisplay('1')">1</button>
+                 <button onclick="toDisplay('2')">2</button>
+                 <button onclick="toDisplay('3')">3</button>
+                 <button onclick="toOperate('-')">-</button>
+             </div>
+             <div class="button">
+                 <button onclick="toDisplay('.')">.</button>
+                 <button onclick="toDisplay('0')">0</button>
+                 <button onclick="toOperate('/')">/</button>
+                 <button onclick="toOperate('*')">x</button>
+             </div>
+             <div class="button">
+                 <button class="op" id="res" onclick="toReset()">RESET</button>
+                 <button class="op" id="eq" onclick="equalTo()">=</button>
+             </div>
+         </div>
+          
+     </div>
+     
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
